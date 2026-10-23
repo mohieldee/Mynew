@@ -31,8 +31,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p app/src/main/assets app/src/main/java/com/zakkerni/app
-          cp "تطبيق ذكرني اذكار المسلم كامل.html" app/src/main/assets/index.html
-
+          cp "تطبيق-ذَكِّرْني-أذكار-المسلم-كامل.html" app/src/main/assets/index.html
           cat > settings.gradle <<'EOF'
           pluginManagement {
               repositories {
