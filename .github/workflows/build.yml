@@ -21,18 +21,12 @@ jobs:
           java-version: "17"
 
       
+  
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
 
-    
-      - name: Accept Android SDK licenses
-        run: |
-          set +o pipefail
-          yes | sdkmanager --licenses
-          set -o pipefail
-
-      - name: Install Android SDK packages
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - name: Create Android project
         shell: bash
         run: |
